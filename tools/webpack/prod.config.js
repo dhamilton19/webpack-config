@@ -1,4 +1,4 @@
-import merge from 'webpack-merge';
+const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const path = require('path');

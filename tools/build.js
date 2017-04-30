@@ -4,15 +4,15 @@
 // Allowing console calls below since this is a build file.
 /* eslint-disable no-console */
 require('dotenv').config();
-import webpack from 'webpack';
-import config from './webpack/prod.config';
-import {
+const webpack = require('webpack');
+const config = require('./webpack/prod.config');
+const {
   chalkError,
   chalkSuccess,
   chalkWarning,
   chalkProcessing,
-} from './chalkConfig';
-import path from 'path';
+} = require('./chalkConfig');
+const path = require('path');
 
 process.env.NODE_ENV = 'production'; // this assures React is built in prod mode and that the Babel dev config doesn't apply.
 
