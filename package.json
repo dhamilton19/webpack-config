@@ -9,7 +9,7 @@
     "build": "./node_modules/.bin/babel tools -d lib"
   },
   "bin": {
-    "webpack-config-build": ".lib//build.js"
+    "webpack-config-build": "./lib/build.js"
   },
   "keywords": [],
   "author": "",
