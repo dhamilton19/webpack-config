@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+import merge from 'webpack-merge';
 
 const parts = require('./parts');
 const commonConfig = require('./common.config');

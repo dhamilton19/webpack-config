@@ -4,10 +4,12 @@
   "description": "Cli tool for build configuration",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean-lib": "rimraf ./lib",
+    "prebuild": "npm run clean-lib",
+    "build": "./node_modules/.bin/babel tools -d lib"
   },
   "bin": {
-    "webpack-config-build": "./tools/build.js"
+    "webpack-config-build": ".lib//build.js"
   },
   "keywords": [],
   "author": "",
@@ -23,5 +25,11 @@
     "webpack": "^2.4.1",
     "webpack-dashboard": "^0.4.0",
     "webpack-merge": "^4.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "rimraf": "^2.6.1"
   }
 }

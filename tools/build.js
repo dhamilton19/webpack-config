@@ -2,24 +2,20 @@
 // Allowing console calls below since this is a build file.
 /* eslint-disable no-console */
 require('dotenv').config();
-const webpack = require('webpack');
-const config = require('../webpack/prod.config');
-const {
+import webpack from 'webpack';
+import config from './webpack/prod.config';
+import {
   chalkError,
   chalkSuccess,
   chalkWarning,
   chalkProcessing,
-} = require('./chalkConfig');
-const path = require('path');
+} from './chalkConfig';
+import path from 'path';
 
 process.env.NODE_ENV = 'production'; // this assures React is built in prod mode and that the Babel dev config doesn't apply.
 
-console.log('--------------------------');
-console.log(process.env.DIST);
-console.log(process.env.SRC);
-
 console.log(
-  chalkProcessing('Generating minified bundle. This will take a moment...')
+  chalkProcessing('Generating minified bundle. This will take a moment...'),
 );
 
 webpack(config).run((error, stats) => {
@@ -45,8 +41,8 @@ webpack(config).run((error, stats) => {
   // if we got this far, the build succeeded.
   console.log(
     chalkSuccess(
-      "Your app is compiled in production mode in /dist. It's ready to roll!"
-    )
+      "Your app is compiled in production mode in /dist. It's ready to roll!",
+    ),
   );
 
   return 0;

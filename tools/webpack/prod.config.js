@@ -1,4 +1,4 @@
-const merge = require('webpack-merge');
+import merge from 'webpack-merge';
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const WebpackMd5Hash = require('webpack-md5-hash');
 const path = require('path');
@@ -83,7 +83,7 @@ module.exports = merge([
         {
           test: /(\.css|\.scss|\.sass)$/,
           loader: ExtractTextPlugin.extract(
-            'css-loader?sourceMap!postcss-loader!sass-loader?sourceMap'
+            'css-loader?sourceMap!postcss-loader!sass-loader?sourceMap',
           ),
         },
       ],
