@@ -2,14 +2,8 @@
   "name": "webpack-config",
   "version": "1.0.0",
   "description": "Cli tool for build configuration",
-  "main": "index.js",
-  "scripts": {
-    "clean-lib": "rimraf ./lib",
-    "prebuild": "npm run clean-lib",
-    "build": "./node_modules/.bin/babel tools -d lib"
-  },
   "bin": {
-    "webpack-config-build": "./lib/build.js"
+    "webpack-config-build": "./tools/build.js"
   },
   "keywords": [],
   "author": "",
